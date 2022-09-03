@@ -1,0 +1,91 @@
+create a class student having fields rno,name,course,fees
+create a method getdata with no parameters , create overloaded method with 2 parameters, 3 parameters, 4 parameters and display method.
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Q6assingment
+{
+    internal class Program
+    {
+        class student
+        {
+            int rollno, fees;
+            string name, course;
+
+            public void getdata()
+            {
+                rollno = 101;
+                fees = 20000;
+                name = "Anand";
+                course = "java";
+            }
+            public void getdata(int rollno)
+            {
+                this.rollno = rollno;
+            }
+
+            public void getdata(int rollno,int fees)
+            {
+                this.rollno = rollno;
+                this.fees = fees;
+            }
+
+            public void getdata(int rollno,int fees,string name)
+            {
+                this.rollno = rollno;
+                this.fees=fees;
+                this.name = name;
+            }
+
+            public void getdata(int rollno,int fees,string name,string course)
+            {
+                this.rollno = rollno;
+                this.fees = fees;
+                this.name=name; 
+                this.course = course;
+            }
+
+
+            public void disp()
+            {
+                Console.WriteLine("Roll no ="+rollno);
+                Console.WriteLine("Fees ="+fees);
+                Console.WriteLine("Name ="+name);
+                Console.WriteLine("Course ="+course);
+            }
+
+        }
+        static void Main(string[] args)
+        {
+            
+            student s = new student();
+            s.getdata();
+            s.disp();
+
+            Console.WriteLine("----------Student Details(1)-------------");
+            student s1 = new student();
+            s1.getdata(101);
+            s1.disp();
+
+            Console.WriteLine("----------Student Details(2)-------------");
+            student s2 = new student();
+            s1.getdata(101, 20000);
+            s1.disp();
+
+            Console.WriteLine("----------Student Details(3)-------------");
+            student s3=new student();
+            s1.getdata(101,20000,"Anand");
+            s1.disp();
+
+            Console.WriteLine("----------Student Details(4)-------------");
+            student s4 = new student();
+            s1.getdata(101, 20000, "Anand",".Net");
+            s1.disp();
+        }
+    }
+}

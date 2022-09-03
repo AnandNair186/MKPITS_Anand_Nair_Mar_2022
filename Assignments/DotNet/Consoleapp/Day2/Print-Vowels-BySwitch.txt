@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace vowels
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char x;
+            Console.WriteLine("Enter Vowel");
+            x=Convert.ToChar(Console.ReadLine());
+
+            switch (x)
+            {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+
+                Console.WriteLine(" is Vowel");
+                break;
+                    
+                    default:
+                    Console.WriteLine(" is not a vowel");
+                    break ;
+            }
+            
+            Console.ReadLine();
+        }
+    }
+}

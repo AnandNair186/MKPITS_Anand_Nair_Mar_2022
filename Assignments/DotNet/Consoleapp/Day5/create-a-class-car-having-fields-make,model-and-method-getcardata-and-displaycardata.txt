@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Q4
+{
+    class Car
+    {
+        int year;
+        int model;
+        string color;
+
+        public void getdata()
+        {
+            Console.WriteLine("Enter Year");
+            year=Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Model");
+            model = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Color");
+            color = Console.ReadLine();
+
+
+        }
+
+        public void showdata()
+        {
+            Console.WriteLine(" Year  " + year);
+            Console.WriteLine("Model " + model);
+            Console.WriteLine("Color  " + color);
+
+        }
+    
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Car ca = new Car();
+            ca.getdata();
+            ca.showdata();
+
+            Console.ReadLine();
+
+        }
+    }
+}

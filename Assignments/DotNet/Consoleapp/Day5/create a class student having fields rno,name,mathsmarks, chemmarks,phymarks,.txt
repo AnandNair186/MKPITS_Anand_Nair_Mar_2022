@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Q7
+{
+    class marks
+    {
+        int m1;
+        int m2; 
+        int m3;
+        public void getdata()
+        {
+            Console.WriteLine("Enter Marks1 ");
+            m1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Marks2 ");
+            m2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Marks3 ");
+            m3 = Convert.ToInt32(Console.ReadLine());
+
+
+        }
+
+        public void result()
+        {
+            int total = m1 + m2 + m3;
+            float per = (total / 300f) * 100f;
+            Console.WriteLine("Total =" + total);
+            Console.WriteLine("Percentage ="+per);
+            string grade="";
+            if (per>75)
+            {
+                grade = "Distinction";
+            }
+            else if (per>60 && per<75)
+            {
+                grade = "First Class";
+            }
+            else if (per>40 && per<60)
+            {
+                grade = "Second Class";
+            }
+            else
+            {
+                grade = "Fail";
+            }
+            Console.WriteLine("Grade = "+grade);
+        
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+             marks mrk = new  marks();
+             mrk.getdata();
+            mrk.result();   
+            Console.ReadLine();
+
+        }
+    }
+}

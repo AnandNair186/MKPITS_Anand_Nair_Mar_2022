@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HraDaTotalsal
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int empno, basicsal;
+            string empname;
+            Console.WriteLine("Enter empName");
+            empname=Console.ReadLine();
+            Console.WriteLine("Enter empNo.");
+            empno=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Basic Salary");
+            basicsal = Convert.ToInt32(Console.ReadLine());
+            float hra = 0.32f * basicsal;
+            float da = 0.45f * basicsal;
+            
+            Console.WriteLine("Employ Name "+empname);
+            Console.WriteLine("Employ no. "+empno);
+            Console.WriteLine("Basic Salary "+basicsal);
+            Console.WriteLine("Hra "+hra); 
+            Console.WriteLine("DA "+da);
+            Console.ReadLine();
+        }
+    }
+}

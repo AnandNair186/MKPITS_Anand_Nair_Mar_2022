@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DoWhileTable
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int n,r,c;
+            Console.WriteLine("Enter a no");
+            n=Convert.ToInt32(Console.ReadLine());
+            r = 1;
+            c = 0;
+            do
+            {
+                r = n * c;
+                c++;
+                Console.WriteLine("{0}*{1}={2}", n, c, (n * c));
+            } while (c<=9);
+            
+            Console.ReadLine();
+        }
+    }
+}

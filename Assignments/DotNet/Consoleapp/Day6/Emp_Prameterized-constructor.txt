@@ -1,0 +1,58 @@
+create a class employee having fields empno,empname , designation and salary
+create a constructor with no parameters and create another parameterized constructor with 4 parameters
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Q3
+{
+    class employee
+    {
+        string ename, desig;
+        int id, sal;
+
+        public employee()
+        {
+            Console.WriteLine("no parameter");
+            ename="Mr x";
+            desig = "manager";
+            id = 202;
+            sal = 40000;
+        }
+        public employee(string ename,string desig,int id,int sal)
+        {
+            Console.WriteLine("With parameters");
+            this.ename = ename;
+            this.desig = desig;
+            this.id = id;
+            this.sal = sal;
+        }
+
+        public void disp() 
+        {
+            Console.WriteLine("Employ name "+ename);
+            Console.WriteLine("Designation "+desig);
+            Console.WriteLine("Empoly ID " + id);
+            Console.WriteLine("Salary "+sal);
+        
+        }
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            employee e1=new employee();
+            e1.disp();
+
+            employee e2=new employee("Mr y","Hr",101,80000);
+            e2.disp();
+
+            Console.ReadLine();
+        }
+    }
+}

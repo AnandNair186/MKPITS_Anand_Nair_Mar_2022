@@ -1,0 +1,55 @@
+program for person(name and address) and employee(empno and salary) class.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Q2
+{
+    public class person
+    {
+        string name;
+        string address;
+
+        public void persongetdata(string name,string address)
+        {
+            this.name = name;
+            this.address = address;
+        }
+
+        public void persondisp()
+        {
+            Console.WriteLine("Name :"+name);
+            Console.WriteLine("Address :"+address);
+        }
+    }
+    public class employee : person
+    {
+        int empno;
+        int salary;
+
+        public void empgetdata(int empno,int salary)
+        {
+            this.empno = empno;
+            this.salary = salary;
+        }
+        public void empdisp()
+        {
+            Console.WriteLine("Employ No :"+empno);
+            Console.WriteLine("Salary :"+salary);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            employee e=new employee();
+            e.persongetdata("Anand","abc nagpur");
+            e.empgetdata(101,30000);
+            e.persondisp();
+            e.empdisp();
+        }
+    }
+}

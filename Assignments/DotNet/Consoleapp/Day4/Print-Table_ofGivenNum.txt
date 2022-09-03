@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Q2
+{
+    internal class Program
+    {
+        static void disp(int a)
+        {
+            int res =1;
+            int count = 0;
+            while (count<=9)
+
+            {
+                res = a * count;
+                count++; 
+                
+                Console.WriteLine("{0} * {1} = {2}",a,count,(a*count));
+            }
+
+        }
+        static void Main(string[] args)
+        {
+            int num;
+            Console.WriteLine("Enter a number");
+            num=Convert.ToInt32(Console.ReadLine());
+            disp(num);
+        }
+    }
+}

@@ -1,0 +1,57 @@
+create a class product having fields prodid,prodname,prodrate , quantity
+and methods getproductdata and displayorder
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Q3
+{
+    class Product
+    {
+        string pname;
+        string pdetail;
+        int pid;
+        int quan;
+
+        public void getdata()
+        {
+            Console.WriteLine("Product name ");
+            pname=Console.ReadLine();
+
+            Console.WriteLine("Detail");
+            pdetail=Console.ReadLine();
+
+            Console.WriteLine("Id");
+            pid = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Quantity");
+            quan = Convert.ToInt32(Console.ReadLine());
+
+
+        }
+
+        public void showdata()
+        {
+            Console.WriteLine("Name  "+pname);
+            Console.WriteLine("Detail  "+pdetail);
+            Console.WriteLine("Id  "+pid);
+            Console.WriteLine("Quantity  "+quan);
+
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Product p = new Product();
+            p.getdata();
+            p.showdata();
+
+            Console.ReadLine();
+        }
+    }
+}

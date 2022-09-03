@@ -1,0 +1,60 @@
+create a class employee having fields empno,empname ,designation , basicsalary
+and method calcuatesalary to display 
+hra ie 32% of basicsalary, da ie 43%of basicsalary, ta ie 45% of basicsalary and totalsalary(ie hra+da+ta+basicsalary)
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Q8
+{
+    class Employee
+    {
+     
+        string Empame;
+        int EmpID;
+        string Desig;
+        float basicsal;
+
+        public void getdata()
+        {
+            Console.WriteLine("Enter Name");
+            Empame=Console.ReadLine();
+
+            Console.WriteLine("Enter ID");
+            EmpID= Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Designation");
+            Desig= Console.ReadLine();
+
+            Console.WriteLine("Enter Salary");
+            basicsal = Convert.ToSingle(Console.ReadLine());
+
+        }
+        public void calculate_sal()
+        {
+            float hra = 0.32f * basicsal;
+            float da = 0.43f * basicsal;
+            float ta = 0.45f * basicsal;
+            float tot= hra + da + ta+basicsal;
+            Console.WriteLine("Hra =" + hra);
+            Console.WriteLine("Da =" + da);
+            Console.WriteLine("Ta =" + ta);
+            Console.WriteLine("Total Salary =" + tot);
+
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee em = new Employee();
+            em.getdata();
+            em.calculate_sal();
+            Console.ReadLine();
+        }
+    }
+}

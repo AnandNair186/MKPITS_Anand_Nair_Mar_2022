@@ -1,0 +1,81 @@
+
+using System;
+using first;
+
+
+
+namespace first
+{
+    class account
+    {
+        public int actno;
+        public int balance = 2000;
+        public virtual void deposit(int actno, int amount)
+        {
+            Console.WriteLine("deposit method account class");
+        }
+        public void withdraw(int actno, int amount)
+        {
+            this.actno = actno;
+            balance = balance - amount;
+            Console.WriteLine("amount successfully withdraw in current class balance is " + balance);
+        }
+        public void showbalnce()
+        {
+            Console.WriteLine("balance = " + balance);
+        }
+    }
+    class current : account
+    {
+        public override void deposit(int actno, int amount)
+        {
+            this.actno = actno;
+            balance = balance + amount;
+            Console.WriteLine("amount successfully deposited without interest in current class balance is " + balance);
+        }
+     
+    }
+    class saving : account
+    {
+        public override void deposit(int actno, int amount)
+        {
+            int interst = 500;
+            this.actno = actno;
+            balance = balance + interst + amount;
+            Console.WriteLine("amount successfully deposit with interest in saving class balance is " + balance);
+        }
+   
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter account no");
+            int actno = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter amount to be deposit");
+            int amount = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter account type current or saving");
+
+
+            string acttype = Console.ReadLine();
+            account act = null;
+            if (acttype == "current")
+            {
+                act = new current();
+            }
+            else if (acttype == "saving")
+            {
+                act = new saving();
+            }
+            act.deposit(actno, amount);
+            Console.WriteLine("actno = " + act.actno);
+            act.showbalnce();
+            Console.WriteLine("enter amount to be withdrawl");
+            amount = Convert.ToInt32(Console.ReadLine());
+
+            act.withdraw(actno, amount);
+            Console.WriteLine("actno = " + act.actno);
+            act.showbalnce();
+        }
+    }
+}

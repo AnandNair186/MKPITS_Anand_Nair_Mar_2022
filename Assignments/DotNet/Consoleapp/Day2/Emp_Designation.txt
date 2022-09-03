@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EmpDesignation
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int empno;
+            string empname,designation;
+            Console.WriteLine("Enter empName");
+            empname = Console.ReadLine();
+            Console.WriteLine("Enter Designation");
+            designation = Console.ReadLine();
+            Console.WriteLine("Enter empNo.");
+            empno = Convert.ToInt32(Console.ReadLine());
+            int b1 = 10000;
+            int b2 = 5000;
+            int b3 = 2000;
+
+
+            if (designation == "manager" )
+            { Console.WriteLine("Bonus ="+b1); }
+            else if (designation == "clerk")
+            { Console.WriteLine("Bonus =" + b2); }
+            else if (designation == "peon")
+            { Console.WriteLine("Bonus =" + b3); }
+            else 
+            { Console.WriteLine("Invalid"); }
+            Console.ReadLine();
+
+        }
+    }
+}

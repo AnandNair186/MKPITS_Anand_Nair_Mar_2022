@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Q4
+{
+    class product
+    {
+        int pid, price, quantity;
+        string pname;
+
+        public product()
+        {
+            pid = 10;
+            price = 200;
+            quantity = 2;
+            pname = "Keyboard";
+        }
+        public product(int pid, int price, int quantity, string pname)
+        {
+            this.pid = pid;
+            this.price = price;
+            this.quantity = quantity;
+            this.pname = pname;
+        }
+        public void disp()
+        {
+            Console.WriteLine("Product Id =" + pid);
+            Console.WriteLine("Price =" + price);
+            Console.WriteLine("Quantity =" + quantity);
+            Console.WriteLine("Product Name =" + pname);
+        }
+        internal class Program
+        {
+            static void Main(string[] args)
+            {
+                product p=new product();
+                p.disp();
+
+                Console.WriteLine("--------------Product details---------------");
+                product p1=new product(101,3000,3,"mouse");
+                p1.disp();
+
+            }
+        }
+    }
+}

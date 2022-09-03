@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Q6
+{
+    class Circle
+    {
+        float radius;
+
+        public void area()
+        {
+            Console.WriteLine("Enter Radius to calculate area");
+            radius =Convert.ToSingle(Console.ReadLine());
+            float area = 3.14f * radius * radius;
+            Console.WriteLine(area);
+        }
+
+        public void circ()
+        {
+            Console.WriteLine("Enter Radius to calculate Circumference");
+            radius = Convert.ToSingle(Console.ReadLine());
+            float cir = 2 * 3.14f * radius;
+            Console.WriteLine(cir);
+
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Circle c = new Circle();
+            
+           
+
+            c.area();
+            c.circ();
+
+            Console.ReadLine();
+        }
+    }
+}

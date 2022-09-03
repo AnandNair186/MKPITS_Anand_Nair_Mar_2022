@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Q1
+{
+    internal class Program
+    {
+        static void disp(int x,int y,int z)
+        {
+            string grade ="";
+            int Total=x+y+z;
+            float per = (Total / 300f) * 100f;
+            Console.WriteLine("Total = "+Total);
+            Console.WriteLine("Percentage = "+per);
+            
+
+            if (per>75)
+            {
+                grade = "Distinction";
+            }
+            else if (per>=60 && per<75)
+            {
+                grade = "First Class";
+            }
+            else if (per >= 40 && per <60 )
+            {
+                grade = "Second Class";
+            }
+            else
+            {
+                grade = "Fail";
+            }
+            Console.WriteLine("Grade = " + grade);
+        }
+        static void Main(string[] args)
+        {
+            int s1, s2, s3;
+            Console.WriteLine("Enter subject 1 marks"); 
+            s1=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter subject 2 marks");
+            s2=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter subject 3 marks");
+            s3=Convert.ToInt32(Console.ReadLine());
+
+            disp(s1,s2,s3);
+
+
+        }
+    }
+}

@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Q2
+{
+    class Customer
+    {
+        string cname;
+        string caddr;
+        int cno;
+
+        public void getdata(string a,string b,int c)
+        {
+            cname = a;
+            caddr = b;
+            cno = c;
+
+        }
+
+        public void showdata()
+        {
+            Console.WriteLine("Name  "+cname);
+            Console.WriteLine("Address "+caddr);
+            Console.WriteLine("Number  "+cno);
+        }
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer cus=new Customer();
+
+            Console.WriteLine("Enter name");
+            string nm=Console.ReadLine();
+            Console.WriteLine("Address");
+            string ad=Console.ReadLine();
+
+            Console.WriteLine("Customer no");
+            int no = Convert.ToInt32(Console.ReadLine());
+
+            cus.getdata(nm,ad,no);  
+            cus.showdata();
+
+            Console.ReadLine();
+        }
+    }
+}

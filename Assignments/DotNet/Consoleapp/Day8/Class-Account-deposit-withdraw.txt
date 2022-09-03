@@ -1,0 +1,76 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{ 
+    abstract class account
+    {
+        public int accno,wit;
+        public int bal=2000;
+
+        public abstract string deposit(int accno, int amt,int wit);
+
+        public string showbal()
+        {
+            return "Balance =" + bal;
+        }
+    }
+    class saving : account
+    {
+        public override string deposit(int accno, int amt,int wit)
+        {
+            this.accno = accno;
+            this.wit = wit;
+            int i = 500;
+            bal = bal + amt + i-wit;
+            return "saving account balance";
+            
+        }
+    }
+    class current : account
+    {
+        public override string deposit(int accno, int amt, int wit)
+        {
+            this.accno = accno;
+            this.wit= wit;
+            bal = bal + amt-wit;
+            return "current account balance";
+        }
+    }
+    
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter account no");
+            int accno=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Deposit amount");
+            int amt = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Withdrawal amount");
+            int wit = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter account type");
+            string type=Console.ReadLine();
+
+            account a = null;
+            if (type=="saving")
+            {
+                a = new saving();
+            }
+            else if (type=="current")
+            {
+                a = new current();
+            }
+
+            string r;
+            r= a.deposit(accno, amt,wit);
+            Console.WriteLine("Account No =" + a.accno);
+            Console.WriteLine("Withdrawl amount=" + a.wit);
+            Console.WriteLine(r);
+            r = a.showbal();
+            Console.WriteLine(r);
+        }
+    }
+}

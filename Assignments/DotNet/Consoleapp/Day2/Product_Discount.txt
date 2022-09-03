@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DiscountNPQ
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string pname;
+            int prate, quantity;
+            Console.WriteLine("Enter Product name");
+            pname = Console.ReadLine();
+            Console.WriteLine("Enter Product rate");
+            prate = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Quantity");
+            quantity = Convert.ToInt32(Console.ReadLine());
+            int total = prate * quantity;
+            float dis1 = 0.5f * total;
+            float dis2 = 0.1f * total;
+            Console.WriteLine("Product name= " + pname);
+            Console.WriteLine("Total Amount= " + total);
+
+            if (total > 2000)
+                {
+                Console.WriteLine("Discount =" + dis1);
+                }
+                else
+                {
+                Console.WriteLine("Discount =" + dis2);
+                }
+           
+                Console.ReadLine();
+        }
+    }
+}

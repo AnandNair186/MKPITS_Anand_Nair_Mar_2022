@@ -1,0 +1,74 @@
+create a class calculate having fields num1,num2 and 4 methods addition,substraction,
+multiplication and division
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Q5
+{
+    class Calculate
+    {
+        float a;
+        float b;
+        float c;
+        float d;
+     
+
+
+        public void Add(float a,float b,float c,float d)
+        {
+            float res1 = a + b + c + d;
+            Console.WriteLine("Addition =" + res1);
+
+        }
+         public void Sub(float a, float b, float c, float d)
+         {
+            float res1 = a - b - c - d;
+            Console.WriteLine("Substraction =" + res1);
+        }
+
+         public void Mul(float a, float b, float c, float d)
+         {
+            float res1 = a * b * c * d;
+            Console.WriteLine("Multiplication =" + res1);
+        }
+
+         public void Div(float a, float b, float c, float d)
+         {
+            float res1 = a / b / c / d;
+            Console.WriteLine("Division =" + res1);
+        }
+
+       
+            
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Calculate cal = new Calculate();
+            Console.WriteLine("num1");
+            float n1=Convert.ToSingle(Console.ReadLine());
+
+            Console.WriteLine("num2");
+            float n2 = Convert.ToSingle(Console.ReadLine());
+
+            Console.WriteLine("num3");
+            float n3 = Convert.ToSingle(Console.ReadLine());
+
+            Console.WriteLine("num4");
+            float n4 = Convert.ToSingle(Console.ReadLine());
+
+            cal.Add(n1,n2,n3,n4);
+            cal.Sub(n1, n2, n3, n4);
+            cal.Mul(n1, n2, n3, n4);
+            cal.Div(n1, n2, n3, n4);
+
+            Console.ReadLine();
+        }
+    }
+}
