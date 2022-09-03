@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster&display=swap');
+
+
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.div1{
+    width:100%;
+    height:350px;
+    background-color: brown;
+    text-align:center;
+    font-size: 50px;
+    background-image:url('images/bg1.jpg');
+    color:rgb(209, 200, 139);
+    background-size: cover;
+
+    
+    
+}
+a {text-decoration:none ;
+    font-size: 21px;
+    padding:10px;
+    margin: 10px;
+    color:rgb(255, 255, 255);
+    font-family: 'Lobster', cursive;
+     /* font-family: 'Anton', sans-serif; */
+
+
+
+}
+
+a:hover{
+    background-color: #e65144;
+}
+
+button:hover{
+        background-color: black;
+}
+
+
+
+h1{
+    padding:50px;
+    font-family: 'Lobster', cursive;
+    font-weight: 90;
+    font-size: 130px;
+
+}
+
+h2{
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+    color: rgb(57, 49, 49);
+    font-family: 'Anton', sans-serif;
+    /* font-family: 'Lobster', cursive; */
+
+}
+
+
+.button{
+    background-color: #e65144;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-family: 'Anton', sans-serif;
+
+}
+
+/**************************SUB CART**************************/
+
+/* .sub{ 
+    width: 100%;
+    height: 100vh;
+   background-color: bisque;
+ } */
+
+.fruits{
+    width: 90%;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 70px;
+    float: left;
+    /* font-family: 'Anton', sans-serif; */
+    font-family: 'Lobster', cursive;
+    
+}
+
+.fitems{
+        
+        width: 30%;
+        height: 350px;
+        /* border: 1px solid black; */
+        padding-left: 20px;
+        float: left;
+        margin: 20px;
+        
+        
+}
+
+.veg{
+    width: 90%;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 70px;
+    float: left;
+    /* font-family: 'Anton', sans-serif; */
+    font-family: 'Lobster', cursive;
+}
+
+.vitems{
+        
+    width: 30%;
+    height: 350px;
+    /* border: 1px solid black; */
+    padding-left: 20px;
+    float: left;
+    margin: 20px;
+}
+
+.cart{
+    width: 90%;
+    height: 150px;
+    background-color: rgb(219, 82, 82);
+
+    /* float:left; */
+    
+    margin-left: 70px;
+    text-align: center;
+    padding: 50px 30px;
+    font-size: 30px;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    border-radius: 40px;
+
+    
+}
+
+.cart1{
+    float: left;
+    width: 40%;
+    height: 100px;
+    background-color: bisque;
+    border-radius:5px;
+    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+
+}
+
+.cart2{
+    float: left;
+    width: 20%;
+    height: 100px;
+    background-color: bisque;
+    border-radius: 5px;
+    font-family: 'Anton', sans-serif;
+}
+
+
+
+/************************************************Footer*****************************************************/
+
+.foot{
+        width: 100%;
+        height: 300px;
+        background-color: rgba(248, 87, 87, 0.599);
+        font-size: 40px;
+        padding:15px;
+        margin-top: 20px;
+        font-family: 'Lobster', cursive;
+
+}
+
+.pfoot{
+    font-size: 15px;
+    text-align:justify;
+    font-family: 'Lobster', cursive;
+    /* font-family: 'Anton', sans-serif; */
+    
+
+
+}
